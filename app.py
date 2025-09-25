@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 import joblib
 import numpy as np
 
-# Load the trained model from the saved file
+# Load the trained model
 model = joblib.load("iris_model.pkl")
 
 # Initialize the Flask application
@@ -40,3 +40,4 @@ def predict():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)  # Run the server on all interfaces (for external access) on port 5000
+
